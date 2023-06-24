@@ -7,7 +7,7 @@ async function start() {
     const app = await NestFactory.create(AppModule);
     const config = app.get(ConfigService);
     const PORT = config.get<number>('API_PORT');
-    await app.listen(PORT || 1000, () => console.log("Server listening on port", +PORT));
+    await app.listen(PORT || 3001, () => console.log("Server listening on port", +PORT));
   } catch (error) {
     console.log(error);
   }
